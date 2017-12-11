@@ -9,7 +9,7 @@ public class ApplicationContextUtil {
 	private static ApplicationContext applicationContext = null;
 	
 	static {
-		applicationContext = new ClassPathXmlApplicationContext("com/yyq/ioc/beans.xml");
+		applicationContext = new ClassPathXmlApplicationContext("com/yyq/beanlife/beans.xml");
 	}
 	
 	public static ApplicationContext getApplicationContext() {
