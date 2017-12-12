@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+    <beans xmlns="http://www.springframework.org/schema/beans"  
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+           xsi:schemaLocation="http://www.springframework.org/schema/beans   
+           http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"  >
+     
+     
+     
+ <bean id="employee1"  class="com.yyq.collection.Employee" >
+<property name="name">
+<value>张员工
+</value>
+</property>
+
+<property name="id">
+<value>1
+</value>
+</property>
+
+</bean>
+
+<bean id="employee2"  class="com.yyq.collection.Employee" >
+<property name="name">
+<value>王员工
+</value>
+</property>
+
+<property name="id">
+<value>2
+</value>
+</property>
+
+</bean>
+
+
+ <bean id="department"  class="com.yyq.collection.Department" >
+
+<property name="name">
+<value>财务部
+</value></property>
+
+<!-- List 数据怎么注入到beans中 -->
+<property name="empNames">
+<list>
+<value>小明
+</value>
+<value>小明2
+</value>
+<value>小明3
+</value>
+</list>
+</property>
+
+<property name="emplist" >
+	<list>
+		<ref bean="employee2"/>
+		<ref bean="employee1"/>
+	</list>
+</property>
+
+<property name="empset">
+	<set>
+		<ref bean="employee1"/>
+		<ref bean="employee2"/>
+	</set>
+</property>
+
+<property name="empmap">
+	<map>
+		<entry key="1" value="employee1"/>
+		<entry key="2" value="employee2"/>
+	</map>
+</property>
+
+</bean>   
+
+           
+</beans>

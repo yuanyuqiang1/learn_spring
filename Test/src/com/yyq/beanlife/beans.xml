@@ -3,22 +3,27 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
            xsi:schemaLocation="http://www.springframework.org/schema/beans   
            http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"  >
-       
+     
+     
+<!-- 后置处理器设置 -->  
 <bean id="myBeanPostProcessor"  class="com.yyq.beanlife.MyBeanPostProcessor">
 </bean>
-           
- <bean id="personService"  init-method="mmm" destroy-method="sss" class="com.yyq.beanlife.PersonService" >
+
+
+ <!-- init-method="mmm"  -->
+ <bean id="personService" init-method="mmm"  destroy-method="sss" class="com.yyq.beanlife.PersonService" >
 <property name="name">
 <value>小song
+</value></property>
+<property name="age">
+<value>15
 </value></property>
 </bean>   
 
 
-
-<!-- 后置处理器设置 -->
  <bean id="personService2"  class="com.yyq.beanlife.PersonService" >
 <property name="name">
-<value>小song
+<value>小hong
 </value></property>
 </bean>   
 
