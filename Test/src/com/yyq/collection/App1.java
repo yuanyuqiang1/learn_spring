@@ -2,6 +2,7 @@ package com.yyq.collection;
 
 
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Map.Entry;
 
 import org.springframework.context.ApplicationContext;
@@ -31,10 +32,17 @@ public class App1 {
 			
 		}
 		
-		//map  1.迭代器 2.entry
+		//map   1.entry
 		for (Entry<String,Employee> employee : department.getEmpmap().entrySet()){
 			System.out.println(employee.getKey() + employee.getValue().getName());
-			
 		}
+		
+		//2.迭代器
+//		Iterator iterator = department.getEmpmap().entrySet().iterator();
+//		while (iterator.hasNext()) {
+//			Entry dMap =  (Entry) iterator.next();
+//			System.out.println("" + dMap.getKey() + ((Employee)dMap.getValue()).getName());
+//		}
+		
 	}
 }

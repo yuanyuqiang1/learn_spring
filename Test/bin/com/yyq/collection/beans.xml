@@ -11,12 +11,10 @@
 <value>张员工
 </value>
 </property>
-
 <property name="id">
 <value>1
 </value>
 </property>
-
 </bean>
 
 <bean id="employee2"  class="com.yyq.collection.Employee" >
@@ -24,51 +22,49 @@
 <value>王员工
 </value>
 </property>
-
 <property name="id">
 <value>2
 </value>
 </property>
-
 </bean>
 
 
  <bean id="department"  class="com.yyq.collection.Department" >
-
 <property name="name">
 <value>财务部
-</value></property>
-
-<!-- List 数据怎么注入到beans中 -->
-<property name="empNames">
-<list>
-<value>小明
 </value>
-<value>小明2
-</value>
-<value>小明3
-</value>
-</list>
 </property>
 
+<!-- 数组数据注入到beans中 -->
+<property name="empNames">
+	<list>
+		<value>小明
+		</value>
+		<value>小明2
+		</value>
+		<value>小明3
+		</value>
+	</list>
+</property>
+<!-- list数据注入到beans中 -->
 <property name="emplist" >
 	<list>
 		<ref bean="employee2"/>
 		<ref bean="employee1"/>
 	</list>
 </property>
-
+<!-- set数据注入到beans中 -->
 <property name="empset">
 	<set>
 		<ref bean="employee1"/>
 		<ref bean="employee2"/>
 	</set>
 </property>
-
+<!-- map数据注入到beans中 -->
 <property name="empmap">
 	<map>
-		<entry key="1" value="employee1"/>
-		<entry key="2" value="employee2"/>
+		<entry key="11" value-ref="employee1"/>
+		<entry key="22" value-ref="employee2"/>
 	</map>
 </property>
 
