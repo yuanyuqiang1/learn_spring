@@ -67,6 +67,14 @@
 		<entry key="22" value-ref="employee2"/>
 	</map>
 </property>
+<!-- properties数据注入到beans中 -->
+<property name="pp">
+	<props>
+		<prop key="33">hello</prop>
+		<prop key="44">world</prop>
+	</props>
+
+</property>
 
 </bean>   
 

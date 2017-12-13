@@ -2,6 +2,7 @@ package com.yyq.collection;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 public class Department {
@@ -11,8 +12,15 @@ public class Department {
 	private List<Employee> emplist;
 	private Set<Employee> empset;
 	private Map<String, Employee> empmap;
+	private Properties pp;
 	
-	
+
+	public Properties getPp() {
+		return pp;
+	}
+	public void setPp(Properties pp) {
+		this.pp = pp;
+	}
 	public Map<String, Employee> getEmpmap() {
 		return empmap;
 	}

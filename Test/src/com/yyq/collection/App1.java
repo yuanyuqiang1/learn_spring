@@ -1,9 +1,11 @@
 package com.yyq.collection;
 
 
+import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Properties;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -43,6 +45,13 @@ public class App1 {
 //			Entry dMap =  (Entry) iterator.next();
 //			System.out.println("" + dMap.getKey() + ((Employee)dMap.getValue()).getName());
 //		}
+		
+		//get properties
+		//Properties properties = department.getPp();
+		for(Entry<Object, Object> entry : department.getPp().entrySet()) {
+			System.out.println("" + entry.getKey() + entry.getValue());
+			
+		}
 		
 	}
 }
