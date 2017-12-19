@@ -1,5 +1,7 @@
 package com.services;
 
+import com.yyq.dispatch.ByeServices;
+
 public class UserServices {
 	
 	private String name;

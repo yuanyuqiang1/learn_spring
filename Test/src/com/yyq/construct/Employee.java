@@ -20,12 +20,11 @@ public class Employee {
 	
 	
 	public Employee(String name, int age) {
-		super();
 		this.name = name;
 		this.age = age;
 	}
 	public Employee() {
-		
+		System.out.println("assssssssssssssssssss");
 	}
 
 }

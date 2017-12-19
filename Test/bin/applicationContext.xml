@@ -14,7 +14,8 @@
     </property>
 </bean>  
        
-          
+     
+
  <bean id="byeServices" class="com.services.ByeServices">
 		<property name="age">
    			 <value>xiaoming</value>
